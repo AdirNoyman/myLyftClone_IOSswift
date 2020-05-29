@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreLocation
 
 class DriverService {
     
@@ -16,7 +17,10 @@ class DriverService {
     
     func getDriver(pickupLocation: Location) -> (Driver, Int) {
         
-        let driver = Driver(name: "Koko Loko", thumbnail: "kaki", licenseNumber: "8787GHT", rating: 4.5, car: "Porsche")
+        let locations = LocationService.shared.getRecentLocations()
+        let randomLocation = locations[Int(arc4random_uniform(UInt32(locations.count)))]
+        let coordinate = CLLocationCoordinate2D(latitude: randomLocation.lat, longitude: randomLocation.lng)
+        let driver = Driver(name: "Koko Loko", thumbnail: "driver", licenseNumber: "8787GHT", rating: 5.0, car: "Hyundai Sonata", coordinate: coordinate)
         return(driver, 10)
         
     }

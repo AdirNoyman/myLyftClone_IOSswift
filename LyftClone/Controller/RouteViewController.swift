@@ -166,5 +166,16 @@ class RouteViewController: UIViewController, UITableViewDataSource, UITableViewD
         return annotationView
         
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let driverViewController = segue.destination as? DriverViewController
+        {
+            
+            driverViewController.pickupLocation = self.pickUpLocation
+            driverViewController.dropoffLocation = self.dropOffLocation
+            
+        }
+    }
 }
 

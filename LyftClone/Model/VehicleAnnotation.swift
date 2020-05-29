@@ -9,7 +9,7 @@
 import MapKit
 
 
-class VahicleAnnotation: NSObject, MKAnnotation {
+class VehicleAnnotation: NSObject, MKAnnotation {
     
     
     var coordinate: CLLocationCoordinate2D

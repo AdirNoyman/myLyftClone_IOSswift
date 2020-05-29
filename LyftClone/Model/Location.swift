@@ -26,8 +26,8 @@ class Location: Codable {
     }
     
     init(placemark: MKPlacemark) {
-        self.title = placemark.title ?? ""
-        self.subtitle = placemark.subtitle ?? ""
+        self.title = placemark.name ?? ""
+        self.subtitle = placemark.title ?? ""
         self.lat = placemark.coordinate.latitude
         self.lng = placemark.coordinate.longitude
     }

@@ -125,9 +125,9 @@ class HomeViewController: UIViewController, UITableViewDataSource,UITableViewDel
         
         // Creating 3 vehicles annotation and add them to the mapview
         mapView.addAnnotations([
-        VahicleAnnotation(coordinate: coordinate1),
-        VahicleAnnotation(coordinate: coordinate2),
-        VahicleAnnotation(coordinate: coordinate3),
+        VehicleAnnotation(coordinate: coordinate1),
+        VehicleAnnotation(coordinate: coordinate2),
+        VehicleAnnotation(coordinate: coordinate3),
         
         ])
         
